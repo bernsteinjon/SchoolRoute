@@ -1,16 +1,13 @@
-
-
-
 /*---NAVBAR---*/
 .navbar
 {
-  font-size: 1rem;       /* 1rem = 16px */
+  font-size: 1rem;    
   letter-spacing: .1rem;
 }
 
 .fixed-top
 {
-  background: rgba(0, 0, 0, 0);
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .navbar-brand
@@ -64,15 +61,8 @@
   color: #ddc65f;
 }
 
-/* ---HOME--- */
-/* background image */
-/* .home-inner
-{
-  background-image: url(../images/Road-Tripping.mp4);
-} */
-
-/* STUDENT DASHBOARD */
-.dashboard
+/* DASHBOARD */
+.dashboard, .map-style
 {
   position: relative;
   width: 100%;
@@ -83,20 +73,18 @@
 .dashboard-ctrl-panel li
 {
   padding: 0.7rem;
+  list-style: none;
 }
 
-/* dashboard text */
-.caption
+/* dashboard theme */
+.dashTheme
 {
-  width: 100%;
-  max-width: 100%;
-  position: absolute;
-  top: 35%;
+  margin-top: 4rem;
   z-index: 1;
   color: white;
 }
 
-.caption h1
+.dashTheme h1
 {
   font-size: 3.8rem;
   font-weight: 700;
@@ -106,16 +94,28 @@
   padding-bottom: 1rem;
 }
 
-.caption h3
+.dashTheme h3
 {
   font-size: 2rem;
   text-shadow: .1rem .1rem .5rem black;
   padding-bottom: 1.6rem;
 }
 
-.caption a
+.dashTheme a
 {
   color: #ddc65f;
+}
+
+.profile-pic-container
+{
+  width: 200px;
+  height: 200px;
+}
+
+.profile-pic
+{
+  width: 100%;
+  height: auto;
 }
 
 /* get started btn style */
@@ -129,21 +129,11 @@
 }
 
 /* GENERAL STYLING */
-.col-md-8 {
-  margin: 2rem auto 8rem;
+.container
+{
   padding-top: 2rem;
 }
-.col-md-8 h1 {
-    font-size: 2.4rem;
-  }
-.narrow {
-  width: 75%;
-  margin: 1.5rem auto;
-  padding-top: 2rem;
-}
-.narrow h1 {
-    font-size: 2.4rem;
-  }
+
 .btn-secondary {
   border-width: medium;
   border-radius: 0;
@@ -162,31 +152,35 @@
   color: white;
 }
 
-/* Mobile compatibility settings */
-/* half sizes of elements */
-@media (max-width: 768px)
+/* Map */
+.map-theme
 {
-  .caption h1
-{
-  font-size: 1.4rem;
-  letter-spacing: .15rem;
-  padding-bottom: .5rem;
+  float: center;
+  padding-left: 3rem;
+  padding-top: 6rem;
+  z-index: 1;
+  color: white;
 }
 
-.caption h3
+.map-pic
 {
-  font-size: 1.1rem;
-  padding-bottom: 1.2rem;
+  float: center;
+  height: 400px;
+  width: 600px;
 }
 
-/* get started btn style */
-.btn-lg
+.map-text h2
 {
-  padding: .5rem 1rem;
-  font-size: 1rem;
+  color: #ddc65f;
 }
 
+.map-text ul
+{
+  list-style: none;
 }
 
-/* NAVBAR FORCE HAMBURGER */
+.map-text li
+{
+  padding: .7rem;
+}
 
