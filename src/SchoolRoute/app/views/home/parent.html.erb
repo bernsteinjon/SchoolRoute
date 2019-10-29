@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <title>SchoolRoute</title>
+
+      <!--  css-->
+      <%= stylesheet_link_tag 'bootstrap.min.css' %>
+      <%= stylesheet_link_tag 'style.css' %>
+
+    </head>
+    <body data-spy="scroll" data-target="#navbarResponsive">
+      <header>
+        <!-- NAVBAR SECTION -->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+          
+          <h2 class="navbar-brand">SchoolRoute Logo</h2>
+          <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <span class="navbar-nav mr-auto">       <!-- This is a spacer to move dropdown menu to the right -->
+            </span>
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Donald Glover
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Dashboard</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Logout</a>
+                </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- END NAVBAR SECTION -->
+
+        <!-- HOME SECTION -->
+        <div id="dashboard">
+          <div class="dashboard">
+
+            <!-- CAPTION -->
+            <div class="row">
+              <div class="col-md-6 dashTheme">
+                <div class="container">
+                  <h2>Dashboard</h2>
+                  <ul class="dashboard-ctrl-panel">
+                    <li><%= link_to 'View Walking Schoolbus', home_map_path, :class => "btn btn-outline-light btn-lg" %><p>(prototype page available)</p></li>
+                    <li><a class="btn btn-outline-light btn-lg" href="#">Attendance List</a></li>
+                    <li><a class="btn btn-outline-light btn-lg" href="#">Search for Student</a></li>
+                    <li><a class="btn btn-outline-light btn-lg" href="#">Edit Profile</a></li>
+                    <li><a class="btn btn-outline-light btn-lg" href="#">Logout</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="col-md-6 dashTheme">
+                
+                <div class="row">
+                  <div class="container">  
+                    <h2><a href="#">Donald Glover's</a> Profile</h2>
+                    <div class="profile-pic-container">
+                      <%= image_tag 'profilePic.jpg', :class => "profile-pic" %>
+                    </div> 
+                    
+                  </div>  
+          
+                </div>
+
+                <div class="row">
+                  <div class="container">
+                    <h3><a href="#school-Administrator-profile">Trenton Middle School</a></h3>
+                    <ul style="list-style: none">
+                      <li><h5>Schoolbus #: <a href="#schoolbusID">358</a></h5></li>
+                      <li><h5>Average trip time: <a href="#timeLog">11 min 34 sec</a></h5></li>
+                      <li><h5>Saftey Points: <a href="safteyPoints">58</a></h5></li>
+                      <li><h5>Students in your group: Joe, Sarah, John, Mike, Melissa</h5></li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END HOME SECTION -->
+      </header>
+
+      <footer>
+        <div class="container">
+          <p>MSF - Copyright &copy; 2019</p>
+        </div>
+      </footer>
+
+      <!-- Script Sources -->
+      <%= javascript_include_tag 'jquery-3.3.1.min.js' %>
+      <%= javascript_include_tag 'bootstrap.min.js' %>
+    </body>
+  </html>
