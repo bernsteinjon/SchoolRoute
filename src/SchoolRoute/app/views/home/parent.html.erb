@@ -23,7 +23,7 @@
             <ul class="navbar-nav">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Donald Glover
+                      Mrs. Johnson
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="#">Dashboard</a>
@@ -45,48 +45,62 @@
         <div id="dashboard">
           <div class="dashboard">
 
-            <!-- CAPTION -->
-            <div class="row">
-              <div class="col-md-6 dashTheme">
-                <div class="container">
-                  <h2>Dashboard</h2>
-                  <ul class="dashboard-ctrl-panel">
-                    <li><%= link_to 'View Walking Schoolbus', home_map_path, :class => "btn btn-outline-light btn-lg" %><p>(prototype page available)</p></li>
-                    <li><a class="btn btn-outline-light btn-lg" href="#">Attendance List</a></li>
-                    <li><a class="btn btn-outline-light btn-lg" href="#">Search for Student</a></li>
-                    <li><a class="btn btn-outline-light btn-lg" href="#">Edit Profile</a></li>
-                    <li><a class="btn btn-outline-light btn-lg" href="#">Logout</a></li>
-                  </ul>
-                </div>
-              </div>
+            <div class="col-md-12 text-center dashTheme">
+                <h1>Mrs. Johnson</h1>
+                <h4>Parent</h4>              
+            </div>
+            <div class="row" style="margin-top: 2rem;">
+              <div class="col-md-6 text-center">
+                <div class="student-sect sect-label">
+                  <h1>Students</h1>
 
-              <div class="col-md-6 dashTheme">
-                
-                <div class="row">
-                  <div class="container">  
-                    <h2><a href="#">Donald Glover's</a> Profile</h2>
-                    <div class="profile-pic-container">
-                      <%= image_tag 'profilePic.jpg', :class => "profile-pic" %>
-                    </div> 
-                    
-                  </div>  
-          
-                </div>
+                  <div class="row">
+                    <div class="text-container">
+                      <input type="text" placeholder="Student Name" name="regStudentText">
+                    </div>
+                    <a class="btn btn-outline-light btn-lg" href="#">Register Student</a>
+                  </div> <!-- END ROW DIV -->
 
-                <div class="row">
-                  <div class="container">
-                    <h3><a href="#school-Administrator-profile">Trenton Middle School</a></h3>
-                    <ul style="list-style: none">
-                      <li><h5>Schoolbus #: <a href="#schoolbusID">358</a></h5></li>
-                      <li><h5>Average trip time: <a href="#timeLog">11 min 34 sec</a></h5></li>
-                      <li><h5>Saftey Points: <a href="safteyPoints">58</a></h5></li>
-                      <li><h5>Students in your group: Joe, Sarah, John, Mike, Melissa</h5></li>
+                  <div class="list">
+                    <ul>
+                      <li>Student 1<span><b>(X)</b></span></li>
+                      <li>Student 2<span><b>(X)</b></span></li>
+                      <li>Student 3<span><b>(X)</b></span></li>
+                      <li>Student 4<span><b>(X)</b></span></li>
                     </ul>
                   </div>
                 </div>
 
+                <div class="list">
+                  <div class="sect-label">
+                    <h1>Volunteers</h1>
+                  </div>
+                  <ul>
+                      <li>Volunteer 1<span><b>(VIEW)</b></span></li>
+                      <li>Volunteer 2<span><b>(VIEW)</b></span></li>
+                      <li>Volunteer 3<span><b>(VIEW)</b></span></li>
+                      <li>Volunteer 4<span><b>(VIEW)</b></span></li>
+                    </ul>
+                </div>
+
+                
               </div>
-            </div>
+              
+              <div class="col-md-6">
+                <div class="sect-label">
+                  <h1>Bus Stop</h1>
+                  <div class="list">
+                    <ul>
+                      <li>Location 1<span><b>(VIEW)</b></span></li>
+                      <li>Location 2<span><b>(VIEW)</b></span></li>
+                      <li>Location 3<span><b>(VIEW)</b></span></li>
+                      <li>Location 4<span><b>(VIEW)</b></span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>  <!-- END ROW DIV -->  
+
           </div>
         </div>
         <!-- END HOME SECTION -->

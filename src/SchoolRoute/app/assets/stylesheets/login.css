@@ -15,7 +15,7 @@ input[type=text], input[type=password] {
 
 /* Set a style for all buttons */
 button {
-  background-color: #4CAF50;
+  background-color: #c5ac3c;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -55,7 +55,14 @@ img.avatar {
 
 /* The "Forgot password" text */
 span.psw {
-//  float: right;
-//  padding-top: 16px;
+  float: right;
+  padding-top: 16px;
 }
 
+
+.parent-page
+{
+  color: black;
+  size: 20px;
+  font-weight: bold;
+}

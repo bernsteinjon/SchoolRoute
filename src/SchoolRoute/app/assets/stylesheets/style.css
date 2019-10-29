@@ -106,6 +106,37 @@
   color: #ddc65f;
 }
 
+/* dash */
+.sect-label
+{
+  background-color: gray;
+}
+
+.text-container
+{
+  width: 20em;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.list ul
+{
+  list-style: none;
+}
+
+.list li
+{
+  background-color: white;
+  margin: 0.4rem;
+  padding: 0.6rem;
+  border-style: solid;
+}
+
+.list li span
+{
+  padding-left: 75%;
+}
+
 .profile-pic-container
 {
   width: 200px;
