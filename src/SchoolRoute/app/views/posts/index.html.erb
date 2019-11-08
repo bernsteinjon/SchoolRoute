@@ -1,0 +1,51 @@
+<%-#Written by Jonathan Bernstein -%>
+
+<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<%= stylesheet_link_tag 'bootstrap.min.css' %>
+			<%= stylesheet_link_tag 'style.css' %>
+		</head>
+		<body data-spy="scroll" data-target="#navbarResponsive">
+			<header>
+				<nav class="navbar navbar-expand-md navbar-dark fixed-top">
+					<h2 class="navbar-brand">SchoolRoute</h2>
+					<button type ="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarResponsive">
+						<span class="navbar-nav mr-auto"></span>
+						<ul class="navbar-nav">
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Mrs. Johnson </a>
+								<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+									<a class="dropdown-item" href="#"><%= link_to "Home", home_parent_path %></a>
+									<a class="dropdown-item" href="#">Another Action</a>
+									<a class="dropdown-item" href="#">Another Action</a>
+								</div>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#"><%= link_to "Logout", home_login_path%></a>
+							</li>
+						</ul>
+					</div>
+				<nav> 
+			</header>
+<br><br><br>
+<div>
+<h1> Bus Stops  </h1>
+<%= link_to 'Back to home', home_parent_path, :class => 'btn btn-light' %><br>
+<%= link_to 'Add a new bus stop', posts_new_path, :class => 'btn btn-light' %>
+<% @posts.each do |post| %>
+	<div class="well">
+		<h3><%= post.title %></h3>
+		<%= link_to "View Bus Stop", post_path(post), :class => 'btn btn-default' %>
+	</div>
+<% end %>
+</div>
+
+<%= javascript_include_tag 'jquery-3.3.1.min.js' %>
+<%= javascript_include_tag 'bootstrap.min.js' %>
+</body>
+</html>

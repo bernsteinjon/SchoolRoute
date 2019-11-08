@@ -1,3 +1,5 @@
+<%-# Written by Brandon Hong, Jon Bernstein %>
+
 <!DOCTYPE html>
   <html lang="en">
     <head>
@@ -89,14 +91,17 @@
               <div class="col-md-6">
                 <div class="sect-label">
                   <h1>Bus Stop</h1>
-                  <div class="list">
-                    <ul>
-                      <li>Location 1<span><b>(VIEW)</b></span></li>
-                      <li>Location 2<span><b>(VIEW)</b></span></li>
-                      <li>Location 3<span><b>(VIEW)</b></span></li>
-                      <li>Location 4<span><b>(VIEW)</b></span></li>
-                    </ul>
-                  </div>
+		  <%= link_to 'View Bus Stops', posts_path, :class => 'btn btn-default' %><br><br>
+     
+  			<% @posts.each do |post| %>
+				<div class="well">
+					<h3><%= post.title %></h3>
+					<%= link_to "View Stop", post_path(post), :class => 'btn btn-default'%>
+				</div>
+			<% end %>
+                	
+                    
+                  
                 </div>
               </div>
             </div>  <!-- END ROW DIV -->  
@@ -108,7 +113,7 @@
 
       <footer>
         <div class="container">
-          <p>MSF - Copyright &copy; 2019</p>
+          <p>Developed by students at The College of New Jersey</p>
         </div>
       </footer>
 

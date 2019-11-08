@@ -1,0 +1,17 @@
+<%-# Written by Jon Bernstein %>
+
+<h1>Edit Bus Stop</h1>
+
+<%= form_for :post, url: post_path(@post), method: :patch  do |f| %>
+	<p>
+		<%= f.label :title %><br>
+		<%= f.text_field :title %>
+	</p>
+	
+	<p>
+		<%= f.submit({:class => 'btn btn-primary'}) %>
+	</p>
+	
+	<% end %>
+
+<%= link_to "Done editing", posts_path, :class => 'btn btn-primary' %>
