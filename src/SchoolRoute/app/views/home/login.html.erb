@@ -6,7 +6,20 @@
   </div>
 
   <div class="container">
-    <label for="uname"><b>Username</b></label>
+
+    <!-- Testing login logic...may delete-->
+    <% if current_user %>
+  Logged in as <%= current_user.email %>.
+  <%= link_to "Log Out", logout_path %>
+<% else %>
+  <%= link_to "Sign Up", signup_path %> or 
+  <%= link_to "Log In", login_path %>
+<% end %>
+<p id="notice"><%= notice %></p>
+<h1>Hello!</h1>
+<p></p>
+
+<!--    <label for="uname"><b>Username</b></label>
     <input type="text" placeholder="Enter Username" name="uname" >
 
     <label for="psw"><b>Password</b></label>
@@ -14,7 +27,7 @@
 
     <button type="submit">Login</button>
     <button type="submit">Sign Up</button>
-  </div>
+  </div> -->
     <%= link_to 'View Parent Profile', home_parent_path, :class => "parent-page" %>
    <!-- <span class="Parent">Parent? <a href="#">go to parent page?</a></span>-->
 </form>
