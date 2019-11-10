@@ -57,19 +57,16 @@
                 <div class="student-sect sect-label">
                   <h1>Students</h1>
 
-                  <div class="row">
-                    <div class="text-container", style="margin-left: 2rem">
-                      <input type="text" placeholder="Student Name" name="regStudentText">
-                    </div>
-                  </div> <!-- END ROW DIV -->
-
                   <div class="list">
-                    <ul>
-                      <li>Student 1<span><b>(X)</b></span></li>
-                      <li>Student 2<span><b>(X)</b></span></li>
-                      <li>Student 3<span><b>(X)</b></span></li>
-                      <li>Student 4<span><b>(X)</b></span></li>
-                    </ul>
+                    <div class = "container">
+                    <% @student.each do |student| %>
+                            <div class="well list_style" >
+                                    <h3><%= student.name%></h3>
+                                    <%= link_to "Delete", student_path(student), method: :delete,
+                                                                                  data: {confirm: 'Confirm?'}, :class => 'btn btn-danger' %>
+                            </div>
+                    <% end %>             
+                    </div>
                   </div>
                 </div>
 

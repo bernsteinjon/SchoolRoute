@@ -58,20 +58,32 @@
                   <h1>Students</h1>
 
                   <div class="row">
-                    <div class="text-container">
-                      <input type="text" placeholder="Student Name" name="regStudentText">
-                    </div>
-                    <a class="btn btn-outline-light btn-lg" href="#">Register Student</a>
+                    <div class="form-container">
+                      <%= form_for :student, url: students_path  do |f| %>
+                        <p>
+                          <%= f.text_field :name, :placeholder => "Student Name" %>
+                      
+
+                      
+                          <%= f.submit "Register Student", :class => "btn btn-primary" %>
+                          <br>
+                        </p>
+                        
+                        <% end %>
+                      </div>
                   </div> <!-- END ROW DIV -->
 
                   <div class="list">
-                    <ul>
-                      <li>Student 1<span><b>(X)</b></span></li>
-                      <li>Student 2<span><b>(X)</b></span></li>
-                      <li>Student 3<span><b>(X)</b></span></li>
-                      <li>Student 4<span><b>(X)</b></span></li>
-                    </ul>
-                  </div>
+                    <div class = "container">
+                      <% @student.each do |student| %>
+                              <div class="well list_style" >
+                                      <h3><%= student.name%></h3>
+                                      <%= link_to "Delete", student_path(student), method: :delete,
+                                                                                    data: {confirm: 'Confirm?'}, :class => 'btn btn-danger' %>
+                              </div>
+                      <% end %>             
+                      </div>
+                    </div>
                 </div>
 
                 <div class="list">
