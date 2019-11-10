@@ -1,0 +1,26 @@
+<h1> Add Parent</h1>
+
+<%= form_for :parent, url: parents_path  do |f| %>
+	<% if @parent.errors.any? %>
+		<% @parent.errors.full_messages.each do |msg| %>
+		<div class="alert alert-danger"><%= msg %></div>
+		<% end %>
+	<% end %>
+
+	<p>
+		<%= f.label :title %><br>
+		<%= f.text_field(:title, {:class => 'form-control'})%>
+	</p>
+
+	<p>
+		<%= f.label :body %><br>
+		<%= f.text_field(:body, {:class => 'form-control'} ) %>
+	</p>
+	
+	<p>
+		<%= f.submit({:class => 'btn btn-primary'}) %>
+		<br>
+		<%= link_to 'Cancel', parents_path %>
+	</p>
+	
+<% end %>

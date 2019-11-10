@@ -11,5 +11,6 @@ class ApplicationController < ActionController::Base
 
 	def index
 		@posts = Post.all
+		@parents = Parent.all
 	end
 end

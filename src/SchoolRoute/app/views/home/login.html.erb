@@ -14,7 +14,7 @@
 			<%= link_to "Log Out", logout_path %>
 	                <p></p>
 			<p><%= link_to 'View Parent Profile', home_parent_path, :class => "parent-page" %></p>
-
+			<p><%= link_to 'View admin Profile', home_admin_path, :class => "admin-page" %></p>
 		<% else %>
 		<!-- Testing login logic...may delete-->
 			<%= link_to "Sign Up", signup_path %> or

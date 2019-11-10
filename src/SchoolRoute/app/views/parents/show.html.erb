@@ -1,0 +1,5 @@
+<h2><%= @parent.title %></h2>
+<p><%= @parent.body %><p>
+<hr>
+<%= link_to "Edit", edit_parent_path(@parent), :class => 'btn btn-default'%>
+<%= link_to "Delete", parent_path(@parent),method: :delete, data: {confirm: 'Are you sure?'}, :class => 'btn btn-danger'%>

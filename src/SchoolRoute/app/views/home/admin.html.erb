@@ -1,4 +1,4 @@
-<%-# Written by Brandon Hong, Jon Bernstein, Gavin Bowman %>
+<%-# Written by Brandon Hong, Jon Bernstein, Gavin Bowman, Matthew Van Soelen %>
 
 <!DOCTYPE html>
   <html lang="en">
@@ -37,7 +37,7 @@
                 </li>
                 <li class="nav-item">
                    <!-- <a class="nav-link" href="#">Logout</a>-->
-		   <a <%= link_to "Logout", logout_path %> </a>
+       <a> <%= link_to "Logout", logout_path %> </a>
                 </li>
             </ul>
           </div>
@@ -50,7 +50,7 @@
 
             <div class="col-md-12 text-center dashTheme">
                 <h1><%= current_user.email%></h1>
-                <h4>Parent</h4>              
+                <h4>Admin</h4>              
             </div>
             <div class="row" style="margin-top: 2rem;">
               <div class="col-md-6 text-center">
@@ -58,10 +58,9 @@
                   <h1>Students</h1>
 
                   <div class="row">
-                    <div class="text-container">
+                    <div class="text-container", style="margin-left: 2rem">
                       <input type="text" placeholder="Student Name" name="regStudentText">
                     </div>
-                    <a class="btn btn-outline-light btn-lg" href="#">Register Student</a>
                   </div> <!-- END ROW DIV -->
 
                   <div class="list">
@@ -91,16 +90,29 @@
               
               <div class="col-md-6">
                 <div class="sect-label">
-                  <h1>Bus Stops</h1>
-     
-  			<% @posts.each do |post| %>
-				<div class="well">
-					<h3><%= post.title %></h3>
-				</div>
-			<% end %>
-                	
-                    
-                  
+                  <h1>Bus Stop</h1>	
+	<%= link_to 'View Bus Stops', posts_path, :class => 'btn btn-default btn1' %>
+		<div class = "container">
+		<% @posts.each do |post| %>
+        			<div class="well list_style">
+          				<h3><%= post.title %></h3>
+          				<%= link_to "View Stop", post_path(post), :class => 'btn btn-default'%>
+        			</div>
+			<% end %> 
+		</div>
+	<h1> Parents </h1>	
+	<%=link_to "View Parents", parents_index_path, :class => 'btn btn-light btn1'%>         
+                     
+        </div>
+	<div class = "container">
+		<% @parents.each do |parent| %>
+        		<div class="well list_style" >
+                		<h3><%= parent.title%></h3>
+                		<p><%= parent.body %></p>
+                		<%= link_to "View Parent", parent_path(parent), :class => 'btn btn-default' %>
+       			</div>
+		<% end %>             
+	</div>
                 </div>
               </div>
             </div>  <!-- END ROW DIV -->  
@@ -121,3 +133,4 @@
       <%= javascript_include_tag 'bootstrap.min.js' %>
     </body>
   </html>
+

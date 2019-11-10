@@ -7,12 +7,20 @@ Rails.application.routes.draw do
   #root 'sessiosn#new'
   root 'home#login'
   get 'home/parent'
+  get 'home/admin'
   get 'home/login'
   get 'posts/index'
   get 'posts/new'
+  get 'home/v1'
+  get 'home/v2'
+  get 'home/v3'
+  get 'home/v4'
+  get 'parents/index'
+  get 'parents/new'
 
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
+  resources :parents
 
   get 'signup', to: 'users#new', as: 'signup'
   get 'login', to: 'sessions#new', as: 'login'

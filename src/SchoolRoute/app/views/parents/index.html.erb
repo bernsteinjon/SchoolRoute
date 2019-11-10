@@ -1,0 +1,14 @@
+
+<h1>Parents</h1>
+
+<%= link_to 'Back to Home', home_admin_path, :class => 'btn btn-default'%>
+<%= link_to 'Add a new parent', parents_new_path, :class => 'btn btn-default'%>
+
+<% @parents.each do |parent| %>
+	<div class="well">
+		<h3><%= parent.title%></h3>
+        	<p><%= parent.body %></p>
+		<%= link_to "View Parent", parent_path(parent), :class => 'btn btn-default' %>
+	</div>
+	
+<% end %>

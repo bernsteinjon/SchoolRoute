@@ -1,8 +1,0 @@
-Yo yo yo. Login system has been kind of implemented. Right now, different
-users do not have different permissions. They will hopefully have them 
-eventually. For the time being, if you want to try it out, launch the site,
-and go to csc415-f19-team02.hpc.tcnj.edu:3000/users to register an account.
-Go to /login to try logging in with one of the accounts. There is some
-semblance of session management but it doesn't really fully work yet. Will
-work on this in a bit.
-
